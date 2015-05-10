@@ -1,8 +1,6 @@
 #include "anagram.h"
 #include <algorithm>
 
-#include <iostream>
-
 namespace anagram
 {
   using namespace std;
