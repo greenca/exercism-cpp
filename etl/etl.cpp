@@ -12,7 +12,7 @@ namespace etl
       int curr_val = it->first;
       vector<char> curr_vec = it->second;
       for (int i = 0; i < curr_vec.size(); i++) {
-	new_sys[char(tolower(curr_vec[i]))] = curr_val;
+	new_sys[tolower(curr_vec[i])] = curr_val;
       }
     }
     return new_sys;
