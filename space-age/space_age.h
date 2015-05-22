@@ -6,7 +6,7 @@ namespace space_age
   class space_age {
     long age;
   public:
-    space_age(long);
+    explicit space_age(long);
     long seconds() const;
     float on_earth() const;
     float on_mercury() const;
