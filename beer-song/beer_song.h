@@ -5,9 +5,8 @@
 
 namespace beer
 {
-  std::string verse(int);
-  std::string sing(int, int);
-  std::string sing(int);
+  std::string verse(int num);
+  std::string sing(int first, int last = 0);
 }
 
 #endif

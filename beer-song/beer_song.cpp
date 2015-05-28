@@ -3,34 +3,42 @@
 
 namespace beer
 {
-  using namespace std;
+  using std::string;
+  using std::stringstream;
 
   string verse(int num) {
     stringstream sstm;
-    if (num > 0) sstm << num;
-    else sstm << "No more";
-    if (num == 1) sstm << " bottle";
-    else sstm << " bottles";
-    sstm << " of beer on the wall, ";
-    if (num > 0) sstm << num;
-    else sstm << "no more";
-    if (num == 1) sstm << " bottle";
-    else sstm << " bottles";
-    sstm << " of beer.\n";
     if (num > 0) {
-      sstm << "Take ";
-      if (num > 1) sstm << "one";
-      else sstm << "it"; 
-      sstm <<" down and pass it around, ";
+      string btlString;
+      string tkString;
+      if (num == 1) { 
+	btlString = " bottle";
+	tkString = "it";
+      } else {
+	btlString = " bottles";
+	tkString = "one";
+      }
+      sstm << num << btlString << " of beer on the wall, ";
+      sstm << num << btlString << " of beer.\n";
+      sstm << "Take " << tkString << " down and pass it around, ";
     } else {
+      sstm << "No more bottles of beer on the wall, ";
+      sstm << "no more bottles of beer.\n";
       sstm << "Go to the store and buy some more, ";
     }
-    if (num == 0) sstm << 99;
-    else if (num == 1) sstm << "no more";
-    else sstm << num-1;
-    if (num == 2) sstm << " bottle";
-    else sstm << " bottles";
-    sstm << " of beer on the wall.\n";
+    int remaining = num-1;
+    if (remaining < 0) remaining = 99;
+    if (remaining > 0) {
+      string btlString;
+      if (remaining == 1) {
+	btlString = " bottle";
+      } else {
+	btlString = " bottles";
+      }
+      sstm << remaining << btlString << " of beer on the wall.\n";
+    } else {
+      sstm << "no more bottles of beer on the wall.\n";
+    }
     return sstm.str();
   }
 
@@ -41,10 +49,6 @@ namespace beer
       if (i > last) output += "\n";
     }
     return output;
-  }
-
-  string sing(int first) {
-    return sing(first, 0);
   }
 
 }
