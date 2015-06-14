@@ -6,13 +6,15 @@
 
 namespace dna
 {
-  class counter {
-    std::string dna_string;
-  public:
+class counter {
+    std::map<char, int> counts;
+public:
     counter(const std::string&);
-    std::map<char, int> nucleotide_counts() const;
+    std::map<char, int> nucleotide_counts() const {
+        return counts;
+    }
     int count(char) const;
-  };
+};
 }
 
 #endif
