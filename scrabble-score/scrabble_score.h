@@ -5,7 +5,7 @@
 
 namespace scrabble_score
 {
-int score(std::string);
+int score(const std::string&);
 }
 
 #endif

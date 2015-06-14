@@ -14,7 +14,7 @@ const std::map<std::string, int> scores {
     {"qz", 10}
 };
 
-int score(std::string word) {
+int score(const std::string& word) {
     int result = 0;
     for (int i = 0; i < word.length(); i++) {
         for (auto it = scores.begin(); it != scores.end(); ++it) {
