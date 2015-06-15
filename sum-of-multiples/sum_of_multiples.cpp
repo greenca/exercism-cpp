@@ -9,14 +9,12 @@ int to(int n) {
 int to(std::vector<int> mults, int n) {
     int result = 0;
     for (int i = 0; i < n; i++) {
-        bool multiple = false;
         for (std::vector<int>::iterator it = mults.begin(); it != mults.end(); ++it) {
             if (i % *it == 0) {
-                multiple = true;
+		result += i;
                 break;
             }
         }
-        if (multiple) result += i;
     }
     return result;
 }
