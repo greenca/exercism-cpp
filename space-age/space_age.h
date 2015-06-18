@@ -5,6 +5,7 @@ namespace space_age
 {
   class space_age {
     long age;
+    float years;
   public:
     explicit space_age(long);
     long seconds() const;
