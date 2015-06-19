@@ -5,7 +5,7 @@
 
 namespace binary
 {
-int convert(std::string);
+unsigned int convert(const std::string&);
 }
 
 #endif
