@@ -5,7 +5,7 @@ namespace squares
 {
 int square_of_sums(int n) {
     int sum = 0;
-    for (int i=0; i<=n; i++) {
+    for (int i=1; i<=n; i++) {
         sum += i;
     }
     return std::pow(sum, 2);
@@ -13,7 +13,7 @@ int square_of_sums(int n) {
 
 int sum_of_squares(int n) {
     int sum = 0;
-    for (int i=0; i<=n; i++) {
+    for (int i=1; i<=n; i++) {
         sum += std::pow(i, 2);
     }
     return sum;
